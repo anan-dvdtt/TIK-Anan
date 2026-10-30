@@ -1,0 +1,208 @@
+body{
+    background-image: url(Clouds-and-dots_bl.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+h2{
+    color: white;
+    background-color: dodgerblue;
+    text-align: center; 
+    font-family: "glitter";
+    font-size: 30px;
+    letter-spacing: 1.5px;
+}
+
+h1{
+    color: blanchedalmond;
+    -webkit-text-stroke: 2px rgb(36, 70, 102);
+    text-align: center;
+    font-family: "porkys";
+    font-size: 50px;
+}
+
+div.biodata{
+    margin: 30px auto;
+    width: 65%;
+    background-color: rgba(12, 23, 90, 0.527);
+    color: rgb(243, 234, 220);
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: "blank space";
+    letter-spacing: 1.5px;
+}
+
+div.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+div.photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 3px solid rgb(243, 234, 220);
+}
+
+div.photo img.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: scale(1);
+}
+
+div.photo img.slide.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background-color: rgb(243, 234, 220);
+  color: rgb(29, 64, 131);
+  border: none;
+  padding: 8px 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 14px;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgb(94, 138, 163);
+}
+
+.prev {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.next {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+div.food1{
+    font-size: 20px;
+    font-family: "milky nice";
+    letter-spacing: 1px;
+    margin: 30px auto;
+    width: 15%;
+    height: 60px;
+    color: rgb(243, 234, 220);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(211, 133, 69);
+
+    background-image: url('stripes.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.food2{
+    margin: 15px auto;
+    width: 70%;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+div.food2 img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid rgb(211, 133, 69);
+}
+
+div.song1{
+    font-size: 20px;
+    font-family: "milky nice";
+    letter-spacing: 1px;
+    margin: 30px auto;
+    width: 15%;
+    height: 60px;
+    color: rgb(243, 234, 220);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(179, 76, 98);
+
+    background-image: url('stripes2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.song2{
+    margin: 15px auto;
+    width: 70%;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+div.song2 img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid rgb(179, 76, 98);
+}
+
+.hidden{
+    display: none !important;
+}
+
+@font-face {
+    font-family: "glitter";
+    src: url(Glitter\ Candy\ DEMO.otf)
+}
+
+@font-face {
+    font-family: "porkys";
+    src: url(PORKYS_.TTF);
+}
+
+@font-face {
+    font-family: "blank space";
+    src: url(KGBlankSpaceSolid.ttf);
+}
+
+@font-face {
+    font-family: "milky nice";
+    src: url(MilkyNice-Clean.otf);
+}

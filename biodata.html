@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Biodata Diri</title>
+        <link rel="stylesheet" href="biodatastyle.css">
+    </head>
+    <body>
+        <h2>Selamat Datang di Web Pertama Saya!</h2>
+        <h1>BIODATA DIRI</h1>
+
+        <div class="biodata">
+            <div class="content">
+                <div class="slideshow-container">
+                    <div class="photo">
+                         <img src="anan1.jpg" alt="photo anan" class="slide active">
+                         <img src="anan smol.jpeg" alt="photo kecil anan" class="slide">
+                         <img src="anan w fam.jpeg" alt="photo keluarga" class="slide">
+                         <img src="anan clari.jpeg" alt="Anan, Clarissa" class="slide">
+                         <img src="anan krristen ade.jpeg" alt="Anan, Clarissa" class="slide">
+                         <img src="anan nao.jpeg" alt="Anan, Naomi" class="slide">
+                     </div>
+  
+                    <button class="nav-btn prev">&#10094;</button>
+                    <button class="nav-btn next">&#10095;</button>
+                </div>
+
+                <div class="text">
+                    <p><b>Nama Lengkap :</b> Putu Anandini Devadatti </p>
+                    <p><b>Tanggal Lahir :</b> 25 Juni 2012</p>
+                    <p><b>Tempat Lahir :</b> Jakarta</p>
+                    <p><b>Alamat :</b> Kemanggisan, Jakarta Barat</p>
+                    <p><b>Email :</b> anandini.devadatti@gmail.com</p>
+                    <p><b>Hobi :</b> Memasak, Membaca</p>
+                    <p><b>Motto :</b> “Patience and fortitude conquer all things.”
+                        — Ralph Waldo Emerson</p>
+                    <p><b>Pesan :</b> Yakinlah bahwa Tuhan telah menentukan jalan hidup yang terbaik.</p>
+                </div>
+            </div>
+        </div>
+        <div class="food1">
+            <p><b>Makanan Favorit</b></p>
+        </div>
+        <div class="food2 hidden">
+            <img src="cake.png" alt="strawberry shortcake" class="top">
+            <img src="ebi udon.png" alt="ebi tempura udon" class="top">
+            <img src="shrimpy.png" alt="shrimp aglio olio" class="top">
+            <img src="apple pie.png" alt="apple pie" class="top">
+        </div>
+        
+        <div class="song1">
+            <p><b>Lagu Favorit</b></p>
+        </div>
+        <audio id="audioPlayer"></audio>
+        <div class="song2 hidden">
+            <img src="sunday morning.png" alt="sunday morning" class="sound-img" data-audio="Sunday Morning.mp3">
+            <img src="that's what i like.png" alt="that's what i like" class="sound-img" data-audio="That's What I Like.mp3">
+            <img src="shape of my heart.png" alt="shape of my heart" class="sound-img" data-audio="Shape of My Heart.mp3">
+            <img src="bad.png" alt="bad" class="sound-img" data-audio="bad.mp3">
+        </div>
+<script>
+    const food1 = document.querySelector('.food1');
+    const food2 = document.querySelector('.food2');
+
+    const song1 = document.querySelector('.song1');
+    const song2 = document.querySelector('.song2');
+
+    food1.addEventListener('click', () => {
+    food2.classList.toggle('hidden');
+});
+    song1.addEventListener('click', () => {
+    song2.classList.toggle('hidden');
+});
+
+const slides = document.querySelectorAll('.photo .slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let currentIndex = 0;
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  
+  if (index >= slides.length) {
+    currentIndex = 0;
+  } else if (index < 0) {
+    currentIndex = slides.length - 1;
+  } else {
+    currentIndex = index;
+  }
+  
+  slides[currentIndex].classList.add('active');
+}
+
+nextBtn.addEventListener('click', () => {
+  showSlide(currentIndex + 1);
+});
+
+prevBtn.addEventListener('click', () => {
+  showSlide(currentIndex - 1);
+});
+
+const player = document.getElementById('audioPlayer');
+const songImages = document.querySelectorAll('.sound-img');
+
+songImages.forEach(img => {
+    img.addEventListener('click', () => {
+        const audioSrc = new URL(img.getAttribute('data-audio'), window.location.href).href;
+
+if (player.src === audioSrc) {
+            // Same image clicked: toggle between play and pause
+            if (player.paused) {
+                player.play();
+            } else {
+                player.pause();
+            }
+        } else {
+            // Different image clicked: load new song and play
+            player.src = audioSrc;
+            player.play();
+        }
+    });
+});
+        </script>
+    </body>
+</html>
