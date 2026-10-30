@@ -1,0 +1,236 @@
+body {
+    background-image: url(Untitled\ design.png);
+    background-size: cover;
+    background-position: center top;
+}
+h2{
+    color: white;
+    text-align: center; 
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    font-family: "moon get";
+    padding-top: 20px;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 65px;
+    font-family: "moderniz";
+    margin-bottom: 0;
+}
+.section{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    width: 800px;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 15px rgba(6, 26, 1, 0.644);
+}
+.slide{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+.slide input{
+    display: none;
+}
+.st{
+    width: 20%;
+    transition: 2s;
+}
+.st img{
+    width: 800px;
+    height: 500px;
+}
+.nav-m{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    justify-content: center;
+    display: flex;
+}
+.m-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.m-btn:not(:last-child){
+    margin-right: 30px;
+}
+.m-btn:hover{
+    background-color: white;
+}
+#radio1:checked ~.first{
+    margin-left: 0;
+}
+#radio2:checked ~.first{
+    margin-left: -20%;
+}
+#radio3:checked ~.first{
+    margin-left: -40%;
+}
+#radio4:checked ~.first{
+    margin-left: -60%;
+}
+#radio5:checked ~.first{
+    margin-left: -80%;
+}
+.nav-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.nav-auto div{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.nav-auto div:not(:last-child){
+    margin-right: 30px;
+}
+#radio1:checked ~.nav-auto .a-b1,
+#radio2:checked ~.nav-auto .a-b2,
+#radio3:checked ~.nav-auto .a-b3,
+#radio4:checked ~.nav-auto .a-b4,
+#radio5:checked ~.nav-auto .a-b5{
+    background-color: white;
+}
+
+.intro{
+    margin: 40px auto;
+    width: 80%;
+    background-color: rgba(42, 90, 10, 0.705);
+    color: rgb(243, 234, 220);
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: "utendo";
+    letter-spacing: 1px;
+    text-align: justify;
+}
+.lov{
+    margin: 30px auto;
+    width: 80%;
+    background-color: rgba(90, 75, 10, 0.705);
+    color: rgb(243, 234, 220);
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-family: "utendo";
+    letter-spacing: 1px;
+    flex-direction: column; 
+    align-items: center
+}
+
+.parti1{ 
+    margin: 0;   
+    font-size: 1rem;
+}
+
+.par1{
+    margin: 5px;
+    text-align: justify;
+}
+.liv{
+    margin: 30px auto;
+    width: 80%;
+    background-color: rgba(90, 33, 10, 0.705);
+    color: rgb(243, 234, 220);
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-family: "utendo";
+    letter-spacing: 1px;
+    flex-direction: column; 
+    align-items: center
+}
+
+.parti2{ 
+    margin: 0;   
+    font-size: 1rem;
+}
+
+.par2{
+    margin: 5px;
+    text-align: justify;
+}
+.lev{
+    margin: 30px auto;
+    width: 80%;
+    background-color: rgba(90, 49, 10, 0.705);
+    color: rgb(243, 234, 220);
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-family: "utendo";
+    letter-spacing: 1px;
+    flex-direction: column; 
+    align-items: center
+}
+
+.parti3{ 
+    margin: 0;   
+    font-size: 1rem;
+}
+
+.par3{
+    margin: 5px;
+    text-align: justify;
+}
+.floating-audio-btn {
+    position: fixed;
+    bottom: 20px;       /* Distance from screen bottom */
+    right: 20px;        /* Distance from screen right */
+    z-index: 9999;      /* Keeps button on top of all elements */
+    
+    padding: 12px 18px;
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid rgb(96, 133, 89);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.floating-audio-btn:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+@font-face {
+    font-family: "moon get";
+    src: url(moon_get-Heavy.otf);
+}
+
+@font-face {
+    font-family: "moderniz";
+    src: url(Moderniz.otf);
+}
+
+@font-face {
+    font-family: "utendo";
+    src: url(Utendo-Regular.ttf);
+}
